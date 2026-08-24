@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Schibsted+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;background:#0A0A0A;color:#F4F4EF;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+a:hover{color:#FF3B00}
+::selection{background:#FF3B00;color:#0A0A0A}
+:focus-visible{outline:2px solid #FF3B00;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}[data-rv]{opacity:1!important;transform:none!important}}
+@keyframes grainshift{0%{transform:translate(0,0)}20%{transform:translate(-6%,4%)}40%{transform:translate(4%,-5%)}60%{transform:translate(-3%,-3%)}80%{transform:translate(5%,3%)}100%{transform:translate(0,0)}}
+</style>
+</helmet>
+
+<div data-prog="" style="position:fixed;top:0;left:0;height:2px;width:0;background:#FF3B00;z-index:600"></div>
+
+<div data-pointer="" style="position:fixed;left:0;top:0;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,59,0,.85);background:rgba(255,59,0,.1);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .3s,width .25s cubic-bezier(.2,.8,.2,1),height .25s cubic-bezier(.2,.8,.2,1),background .25s;z-index:900;transform:translate(-50%,-50%)"><span style="width:5px;height:5px;border-radius:50%;background:#FF3B00"></span></div>
+<header style="position:sticky;top:0;z-index:500;background:rgba(10,10,10,.78);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid rgba(244,244,239,.1)">
+  <div style="width:100%;max-width:1280px;margin:0 auto;padding:14px clamp(24px,5vw,64px);display:flex;align-items:center;gap:24px">
+    <a href="Mr Anye Portfolio.dc.html" data-mag="" data-btn="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:color .25s,transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="color:#FF3B00"><span data-arrowl="" style="font-size:13px;display:inline-block;transition:transform .34s cubic-bezier(.2,.8,.2,1)">&#8592;</span> Mr. Anye</a>
+    <nav style="display:flex;gap:2px;margin-left:auto;flex-wrap:wrap" data-navwrap="">
+      <a href="#huma" data-nav="huma" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">Huma</span><span style="display:block;height:15px;color:#FF3B00">Huma</span></span></span></a>
+      <a href="#priste" data-nav="priste" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">Priste</span><span style="display:block;height:15px;color:#FF3B00">Priste</span></span></span></a>
+      <a href="#jewels" data-nav="jewels" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">Jewels</span><span style="display:block;height:15px;color:#FF3B00">Jewels</span></span></span></a>
+      <a href="#asviol" data-nav="asviol" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">ASVIOL</span><span style="display:block;height:15px;color:#FF3B00">ASVIOL</span></span></span></a>
+      <a href="#ancient-flavours" data-nav="ancient-flavours" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">Ancient</span><span style="display:block;height:15px;color:#FF3B00">Ancient</span></span></span></a>
+      <a href="#magna" data-nav="magna" data-swap="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;opacity:.5;display:block;transition:opacity .25s,color .25s" style-hover="opacity:1"><span style="display:block;height:15px;overflow:hidden"><span data-swaptrack="" style="display:block;transition:transform .42s cubic-bezier(.2,.8,.2,1)"><span style="display:block;height:15px;color:inherit">Magna</span><span style="display:block;height:15px;color:#FF3B00">Magna</span></span></span></a>
+      <a href="#contact" data-mag="" data-btn="" style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;margin-left:8px;border:1px solid rgba(244,244,239,.28);border-radius:99px;transition:border-color .25s,color .25s,background .25s,transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="border-color:#FF3B00;color:#FF3B00">Let's talk</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Case index" style="background:#0A0A0A;border-bottom:1px solid rgba(244,244,239,.1)">
+  <div style="width:100%;max-width:1280px;margin:0 auto;padding:clamp(56px,9vh,104px) clamp(24px,5vw,64px) clamp(40px,6vh,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(28px,4vh,44px)">Case studies &#183; 06<span style="flex:1;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h1 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 120,'wght' 870;font-weight:400;text-transform:uppercase;font-size:clamp(2.4rem,7.6vw,6rem);line-height:.96;letter-spacing:-.042em;max-width:15ch">The work, <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.05em;text-transform:lowercase;color:#FF3B00">explained.</i></h1>
+    <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:30px 0 0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;max-width:54ch;color:rgba(244,244,239,.72);text-wrap:pretty">Six clients. What they asked for, what I actually did, and what came out of it.</p>
+  </div>
+</section>
+
+<section id="huma" data-screen-label="001 Huma Laundromat" style="position:relative;overflow:hidden;background:#0A0A0A">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at 126% 22%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at 126% 22%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">001 &#183; Brand strategy &#183; Identity &#183; Verbal identity &#183; Website &#183; Social &#183; Ads &#183; 2025<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">Huma Laundromat — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">a laundry people actually trust</i></h2>
+    <a href="https://humalaundromat.com" data-rv="" data-btn="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;display:inline-flex;align-items:center;gap:9px;margin-top:20px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,244,239,.6);border-bottom:1px solid rgba(244,244,239,.24);padding-bottom:4px;transition:color .25s,border-color .25s,transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="color:#FF3B00;border-color:#FF3B00">Live &#183; humalaundromat.com <span data-arrow="" style="font-size:12px;display:inline-block;transition:transform .34s cubic-bezier(.2,.8,.2,1)">&#8599;</span></a>
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/huma-hero.jpg" decoding="async" alt="Outdoor — billboard campaign, Abuja" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Outdoor — billboard campaign, Abuja</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">A logo and a website for a new laundry service.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">Nobody picks a laundry on looks. They pick on whether the white shirt comes back white.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Every laundry in Abuja advertises freshness, so freshness is worth nothing. What the customer is really deciding is whether to risk their good clothes on a stranger. That&#8217;s a trust problem, and trust problems are solved with promises you can be held to &#8212; not with a nicer logo.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">So the brand is built on the White-Again Guarantee: if it isn&#8217;t clean, they do it again, free. That line sits on the website, in the sales conversation and in the ads. &#8220;Zero Wahala, 100% Freshness&#8221; says the same thing in the language customers actually use with each other.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">From there: the full identity, the tone of voice, the website designed and built, and the social system. The Women&#8217;s Day campaign profiled a woman working as an architect rather than posting a generic graphic &#8212; a service that looks after busy professionals should be seen actually paying attention to them. We ran the pages, made the graphics and video, and ran the paid ads behind them.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Verbal identity and tone of voice</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Website design</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Website build</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social media system</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Graphic and video content</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Sponsored ad campaigns</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Women&#8217;s Day campaign</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Live and trading across Abuja, serving households alongside guest houses, salons and spas.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">1 guarantee</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Carried through every channel</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Social + ads</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Managed end to end, ongoing</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Live</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Designed, built and shipped</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/huma-a.jpg" loading="lazy" decoding="async" alt="Screen — website home, White-Again guarantee" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Screen — website home, White-Again guarantee</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/huma-b.jpg" loading="lazy" decoding="async" alt="Merch — uniform, packaging and staff badges" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Merch — uniform, packaging and staff badges</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section id="priste" data-screen-label="002 Priste" style="position:relative;overflow:hidden;background:#111110">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at -26% 30%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at -26% 30%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">002 &#183; Brand strategy &#183; Identity &#183; Verbal identity &#183; CRM &#183; Film &#183; 2021&#8211;present<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">Priste — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">a tailor with a name people ask for</i></h2>
+    
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/priste-hero.jpg" decoding="async" alt="Campaign — bespoke tailoring, studio portrait" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Campaign — bespoke tailoring, studio portrait</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">A name and a logo for a new tailoring business.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">Nigeria has thousands of excellent tailors and almost no tailoring brands. Skill wasn&#8217;t the gap. Being remembered was.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">If your customer can&#8217;t describe you to a friend, you don&#8217;t have a brand &#8212; you have a workshop with good reviews. So Priste started with positioning: what the house stands for, who it dresses, and what it will not make. Everything else was built outward from that answer.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Then everything a fashion house needs in order to look like one: visual identity, verbal identity, woven labels, garment tags, crests, badges, pins and enquiry cards. We also built them a customer database so measurements, orders and repeat clients live in one system instead of a notebook &#8212; the least glamorous part of the job and the one that keeps paying.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">We ran the social account for the first three months to set the standard, shot the first collection, produced the brand film for it, and animated the logo. There have been several shoots since.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Verbal identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Woven labels</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Garment tags and crests</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Badges and pins</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Enquiry cards</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Customer database (CRM)</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social setup, first 3 months</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">First collection shoot</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand film</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Logo animation</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Five years on and still a live client.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">5 years</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">And still working together</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">1 CRM</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Built, not bought</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">First collection</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Shot and filmed</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/priste-a.jpg" loading="lazy" decoding="async" alt="Print — letterpress business cards, gold foil" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Print — letterpress business cards, gold foil</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/priste-b.jpg" loading="lazy" decoding="async" alt="Collateral — packaging, tags and stationery" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Collateral — packaging, tags and stationery</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section id="jewels" data-screen-label="003 Jewels Trust Fund" style="position:relative;overflow:hidden;background:#0A0A0A">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at 126% 70%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at 126% 70%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">003 &#183; Brand strategy &#183; Identity &#183; Print &#183; Documentary &#183; Photography &#183; 2023<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">Jewels Trust Fund — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">loans that charge no interest</i></h2>
+    
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/jewels-hero.jpg" decoding="async" alt="Film still — YouthUp training graduation" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Film still — YouthUp training graduation</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">Branding for the foundation.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">Interest-free lending looks like charity. Money that looks like charity gets treated like charity, and that shows up in repayment.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Jewels Trust Fund gives interest-free loans to people in underserved communities and then follows the businesses those loans go into. The brand had to do two things at once: look serious enough that taking a loan feels like a real commitment, and warm enough that a first-time borrower isn&#8217;t intimidated out of applying. Get either direction wrong and it costs the organisation real money.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">We built the strategy and the full identity system, then stayed on through the first two training cohorts. We designed and printed the certificates the graduates received, photographed and filmed the cohorts and their graduation day, and cut a documentary from that footage. We also set up their social pages.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">The documentary matters more than it sounds. A non-profit lives on being able to show a funder what actually happened, and most of them have nothing but phone photos.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand guidelines</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Print collateral</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Certificate design and print</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Documentary film</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Event photography</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Videography</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social media setup</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">A full brand system in field use, and two cohorts documented end to end.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">2 cohorts</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Documented start to finish</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">1 documentary</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Shot, cut and delivered</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Certificates</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Designed and printed for every graduate</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/jewels-a.jpg" loading="lazy" decoding="async" alt="System — social, apparel and app identity" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">System — social, apparel and app identity</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/jewels-b.jpg" loading="lazy" decoding="async" alt="Social — story templates, campaign messaging" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Social — story templates, campaign messaging</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section id="asviol" data-screen-label="004 ASVIOL" style="position:relative;overflow:hidden;background:#111110">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at -26% 18%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at -26% 18%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">004 &#183; Brand strategy &#183; Identity &#183; Print &#183; Campaign film &#183; Social &#183; Hiring &#183; 2022&#8211;present<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">ASVIOL — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">four years of campaigns, still running</i></h2>
+    
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/asviol-hero.jpg" decoding="async" alt="Identity — primary logo lockup" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Identity — primary logo lockup</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">Materials for their SGBV prevention campaigns.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">Advocacy work has one failure mode: everybody agrees with it and nobody watches it.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">ASVIOL works to prevent sexual and gender-based violence in Nigeria &#8212; community engagement, training, curriculum, policy advocacy and research. The subject is heavy and the funding cycle rewards earnestness, which is exactly how the category ends up producing material that gets scrolled past. The job was never &#8220;make posters.&#8221; It was make prevention messaging people finish.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">We built the whole thing: strategy, identity, campaign creative, and their first website. We ran their social accounts for the first six months, then helped them hire and hand over &#8212; including recruiting their marketing manager and their design team. That handover was the point. An advocacy organisation that depends on an agency to speak is one budget cycle away from going silent.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Four years later we still produce their campaign films and all their print.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">First website design</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Campaign creative</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Campaign film (ongoing)</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Print production (ongoing)</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social media management, first 6 months</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Recruitment &#8212; marketing manager and design team</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">The longest-running relationship in the studio. ASVIOL now works with partners including UN Women, the Embassy of Sweden, the MacArthur Foundation and the Malala Fund.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">4 years</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">And counting</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">2 teams</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Marketing and design, recruited</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Still printing</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Every campaign since 2022</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/asviol-a.jpg" loading="lazy" decoding="async" alt="Campaign — OOH, collateral and social system" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Campaign — OOH, collateral and social system</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/asviol-b.jpg" loading="lazy" decoding="async" alt="Screen — website home, advocacy landing" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Screen — website home, advocacy landing</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section id="ancient-flavours" data-screen-label="005 Ancient Flavours" style="position:relative;overflow:hidden;background:#0A0A0A">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at 126% 40%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at 126% 40%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">005 &#183; Brand strategy &#183; Identity &#183; Menu design &#183; Photography &#183; Launch &#183; 2021<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">Ancient Flavours — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">a restaurant, launched properly</i></h2>
+    
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/ancient-flavours-hero.jpg" decoding="async" alt="Identity — gold foil emboss on green" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Identity — gold foil emboss on green</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">A brand for a new restaurant.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">A restaurant gets one opening night. If the room is empty, the food never gets a chance.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">The identity was the easy half. The hard half was making sure people showed up.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">We built the strategy and the full identity, designed the food and drinks menus, and shot the actual dishes so the brand launched with real photography instead of stock images of food nobody serves. We set up the social pages, then ran the launch: briefed influencers, placed the story with media outlets, and coordinated the opening itself.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Then we trained their in-house marketing team and handed over &#8212; which is the correct ending for a restaurant, because the people in the building are the ones who know what came out of the kitchen today.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Food and drinks menu design</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Food photography</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social media setup</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Launch strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Influencer coordination</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Media outreach</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">In-house team training and handover</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Launched, then handed to an in-house team we trained.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">2 menus</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Food and drinks</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">1 launch</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Influencers and press, coordinated</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Team trained</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">And handed over to</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/ancient-flavours-a.jpg" loading="lazy" decoding="async" alt="Collateral — packaging, menus, uniform, signage" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Collateral — packaging, menus, uniform, signage</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/ancient-flavours-b.jpg" loading="lazy" decoding="async" alt="Identity — logo suite and secondary marks" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Identity — logo suite and secondary marks</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section id="magna" data-screen-label="006 Magna" style="position:relative;overflow:hidden;background:#111110">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);background-size:20px 20px;opacity:.42;-webkit-mask-image:radial-gradient(70% 62% at -26% 66%,#000 4%,transparent 62%);mask-image:radial-gradient(70% 62% at -26% 66%,#000 4%,transparent 62%)"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(80px,11vh,140px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(24px,3.5vh,36px);flex-wrap:wrap">006 &#183; Brand strategy &#183; Identity &#183; Print &#183; Social ads &#183; Booking &#183; 2019<span style="flex:1;min-width:40px;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 830;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.02;letter-spacing:-.036em;max-width:18ch">Magna — <i style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-variation-settings:normal;font-size:1.06em;text-transform:lowercase;color:#FF3B00">a clinic that got people through the door</i></h2>
+    
+    <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .08s,transform .9s cubic-bezier(.2,.8,.2,1) .08s;margin:0;margin-top:clamp(32px,5vh,52px);display:block"><div style="aspect-ratio:16/9;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/magna-hero.jpg" decoding="async" alt="Identity — primary logo lockup" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Identity — primary logo lockup</figcaption></figure>
+
+    <div data-two="" style="display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vh,64px);align-items:start">
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What they asked for</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.8;color:rgba(244,244,239,.74);max-width:44ch;text-wrap:pretty">A professional look for the clinic.</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What it actually was</h3>
+        <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.34;color:#FF3B00;max-width:34ch;text-wrap:pretty">They didn&#8217;t need a better-looking clinic. They needed more people booking appointments.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(48px,7vh,80px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I actually did</h3>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">Eye care is something people put off until they can&#8217;t read a road sign. A nicer logo doesn&#8217;t move that. What moves it is a reason to come in now and someone they trust telling them to.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">So alongside the strategy and the full identity, we built a referral campaign: existing patients got a discount or an incentive for bringing in friends and family. The cheapest new patient a clinic can get is the one an existing patient walks in with, and eye care is a category people happily recommend once they&#8217;ve had a good experience.</p>
+      <p data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .012s,transform .9s cubic-bezier(.2,.8,.2,1) .012s;margin:0 0 20px;font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">We designed and printed the flyers and distributed them, ran social advertising behind the campaign, and set up a system so people could book an appointment straight from social media instead of having to call. Removing the phone call removes the main reason people postpone.</p>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(36px,5vh,56px)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What I made</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brand strategy</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Visual identity</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Brochure</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Roll-up banners</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Flyer design and print</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Referral campaign</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Social media advertising</span><span style="font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,244,239,.16);padding:7px 12px;color:rgba(244,244,239,.62)">Appointment booking via social</span></div>
+    </div>
+
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:clamp(44px,6vh,72px);padding-top:clamp(28px,4vh,40px);border-top:1px solid rgba(244,244,239,.14)">
+      <h3 style="margin:0 0 16px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,244,239,.5);font-weight:400">What came out of it</h3>
+      <p style="margin:0 0 clamp(30px,4vh,44px);font-size:16px;line-height:1.85;color:rgba(244,244,239,.74);max-width:58ch;text-wrap:pretty">A referral engine the clinic could keep running after handover.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,44px)">
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">1 referral engine</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Patients bringing patients</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Book by DM</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">No phone call required</span></div>
+        <div><b style="display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 116,'wght' 850;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1;letter-spacing:-.036em;color:#FF3B00">Full identity</b><span style="display:block;margin-top:14px;font-size:14px;line-height:1.7;color:rgba(244,244,239,.6);max-width:24ch">Strategy through print</span></div>
+      </div>
+    </div>
+
+    <div data-pair="" style="display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,24px);margin-top:clamp(32px,4vh,48px)">
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/magna-a.jpg" loading="lazy" decoding="async" alt="Screen — website home, appointment booking" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Screen — website home, appointment booking</figcaption></figure>
+      <figure data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1) .06s,transform .9s cubic-bezier(.2,.8,.2,1) .06s;margin:0;display:block"><div style="aspect-ratio:4/3;overflow:hidden;background:#0A0A0A;border:1px solid rgba(244,244,239,.14)"><img src="img/cs/magna-b.jpg" loading="lazy" decoding="async" alt="Packaging — branded dispensing bags" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><figcaption style="margin-top:10px;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.42)">Packaging — branded dispensing bags</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Contact" style="position:relative;overflow:hidden;background:#F4F4EF;color:#0A0A0A">
+  <div style="position:absolute;inset:-30%;pointer-events:none;z-index:0;opacity:.14;mix-blend-mode:multiply;background-image:url(&quot;data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='180'%20height='180'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='3'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='180'%20height='180'%20filter='url(%23n)'/%3E%3C/svg%3E&quot;);background-size:180px 180px;animation:grainshift .9s steps(1) infinite"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;padding:clamp(88px,12vh,150px) clamp(24px,5vw,64px)">
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#FF3B00;margin-bottom:clamp(30px,4vh,50px)">Let&#8217;s talk<span style="flex:1;max-width:96px;height:1px;background:currentColor;opacity:.3"></span></div>
+    <h2 data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin:0;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 118,'wght' 860;font-weight:400;text-transform:uppercase;font-size:clamp(2rem,5.6vw,4.4rem);line-height:1;letter-spacing:-.04em;max-width:17ch">Want the full deck on any of these?</h2>
+    <div data-rv="" style="opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <a href="mailto:writetoanye@gmail.com" data-mag="" data-btn="" style="display:inline-flex;align-items:center;gap:14px;padding:19px 32px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:#0A0A0A;color:#F4F4EF;border-radius:99px;transition:background .3s,color .3s,transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="background:#FF3B00;color:#0A0A0A">writetoanye@gmail.com <span data-arrow="" style="font-size:14px;display:inline-block;transition:transform .34s cubic-bezier(.2,.8,.2,1)">&#8599;</span></a>
+      <a href="Mr Anye Portfolio.dc.html" data-mag="" data-btn="" style="display:inline-flex;align-items:center;gap:10px;padding:19px 30px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(10,10,10,.24);border-radius:99px;color:#0A0A0A;transition:border-color .3s,color .3s,transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="border-color:#FF3B00;color:#FF3B00"><span data-arrowl="" style="font-size:14px;display:inline-block;transition:transform .34s cubic-bezier(.2,.8,.2,1)">&#8592;</span> Back to portfolio</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0A0A0A;border-top:1px solid rgba(244,244,239,.12)">
+  <div style="width:100%;max-width:1280px;margin:0 auto;padding:30px clamp(24px,5vw,64px);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,244,239,.45)">
+    <span>&#169; Mr. Anye 2026</span>
+    <a href="https://linkedin.com/in/mranye" style="transition:color .25s" style-hover="color:#FF3B00">LinkedIn</a>
+    <a href="Ubong-Anye-CV-2026.pdf" download="Ubong-Anye-CV-2026.pdf" style="transition:color .25s" style-hover="color:#FF3B00">Download CV</a>
+    <a href="Mr Anye Portfolio.dc.html" style="transition:color .25s" style-hover="color:#FF3B00">Portfolio &#8593;</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount(){
+    this.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.io = new IntersectionObserver((es)=>{
+      es.forEach((e)=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='none'; this.io.unobserve(e.target); } });
+    },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+    this.scan();
+    this.mo=new MutationObserver(()=>this.scan());
+    this.mo.observe(document.body,{childList:true,subtree:true});
+    this.onScroll=()=>{
+      var p=document.querySelector('[data-prog]'); if(!p) return;
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      p.style.width=(h>0?(window.scrollY/h*100):0)+'%';
+    };
+    this.onMove=(ev)=>{
+      var mag=ev.target.closest ? ev.target.closest('[data-mag]') : null;
+      if(mag && !this.reduce){
+        var r=mag.getBoundingClientRect();
+        mag.style.transform='translate('+((ev.clientX-r.left-r.width/2)*.12)+'px,'+((ev.clientY-r.top-r.height/2)*.2)+'px)';
+        this.lastMag=mag;
+      } else if(this.lastMag){ this.lastMag.style.transform=''; this.lastMag=null; }
+    };
+    window.addEventListener('scroll',this.onScroll,{passive:true});
+    document.addEventListener('pointermove',this.onMove,{passive:true});
+    this.onScroll();
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll',this.onScroll);
+    document.removeEventListener('pointermove',this.onMove);
+    if(this.mo) this.mo.disconnect();
+    if(this.io) this.io.disconnect();
+  }
+  initPointer(){
+    if(this.ptrBound) return;
+    var dot=document.querySelector('[data-pointer]');
+    if(!dot) return;
+    this.ptrBound=true;
+    var x=0,y=0,cx=0,cy=0,raf=null;
+    var loop=()=>{
+      cx+=(x-cx)*0.22; cy+=(y-cy)*0.22;
+      dot.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+      raf=requestAnimationFrame(loop);
+    };
+    document.addEventListener('pointermove',(e)=>{
+      x=e.clientX; y=e.clientY; dot.style.opacity='1';
+      if(!raf) raf=requestAnimationFrame(loop);
+      var hot=e.target.closest ? e.target.closest('a,button,figure') : null;
+      if(hot){ dot.style.width='58px'; dot.style.height='58px'; dot.style.background='rgba(255,59,0,.18)'; }
+      else { dot.style.width='34px'; dot.style.height='34px'; dot.style.background='rgba(255,59,0,.1)'; }
+    },{passive:true});
+    document.addEventListener('pointerleave',()=>{ dot.style.opacity='0'; });
+  }
+  scan(){
+    this.initPointer();
+    document.querySelectorAll('[data-swap]:not([data-wpseen])').forEach((el)=>{
+      el.setAttribute('data-wpseen','1');
+      var track=el.querySelector('[data-swaptrack]');
+      if(!track) return;
+      el.addEventListener('pointerenter',()=>{ track.style.transform='translateY(-50%)'; });
+      el.addEventListener('pointerleave',()=>{ track.style.transform='translateY(0)'; });
+    });
+    document.querySelectorAll('[data-btn]:not([data-btnseen])').forEach((el)=>{
+      el.setAttribute('data-btnseen','1');
+      var ar=el.querySelector('[data-arrow]'), al=el.querySelector('[data-arrowl]');
+      el.addEventListener('pointerenter',()=>{ if(ar) ar.style.transform='translate(3px,-3px)'; if(al) al.style.transform='translate(-3px,0)'; });
+      el.addEventListener('pointerleave',()=>{ if(ar) ar.style.transform='translate(0,0)'; if(al) al.style.transform='translate(0,0)'; });
+    });
+    document.querySelectorAll('[data-rv]:not([data-seen])').forEach((el)=>{ el.setAttribute('data-seen','1'); this.io.observe(el); });
+    this.responsive();
+    this.initNav();
+  }
+  responsive(){
+    if(this.rz) return;
+    this.rz=true;
+    var apply=()=>{
+      var wide=window.innerWidth>900;
+      document.querySelectorAll('[data-two]').forEach((el)=>{ el.style.gridTemplateColumns = wide?'1fr 1fr':'1fr'; });
+      document.querySelectorAll('[data-pair]').forEach((el)=>{ el.style.gridTemplateColumns = wide?'1fr 1fr':'1fr'; });
+      document.querySelectorAll('[data-navwrap]').forEach((el)=>{ el.style.display = window.innerWidth>820?'flex':'none'; });
+    };
+    apply();
+    window.addEventListener('resize',apply);
+  }
+  initNav(){
+    if(this.navDone) return;
+    var links=Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+    if(links.length<5) return;
+    var secs=links.map((a)=>document.getElementById(a.dataset.nav));
+    if(secs.some((s)=>!s)) return;
+    this.navDone=true;
+    var sio=new IntersectionObserver((es)=>{
+      es.forEach((e)=>{
+        if(!e.isIntersecting) return;
+        links.forEach((a,i)=>{ var on=secs[i]===e.target; a.style.opacity=on?'1':'.5'; a.style.color=on?'#FF3B00':''; });
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach((s)=>sio.observe(s));
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

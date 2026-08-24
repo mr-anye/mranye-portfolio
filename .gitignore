@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# partial downloads and intermediate build sources, kept locally only
+_incomplete-downloads/
