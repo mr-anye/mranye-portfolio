@@ -43,6 +43,57 @@
   })();
 
   /* ------------------------------------------------------------------
+     mailto safety net.
+     A mailto: link does nothing visible when the machine has no mail
+     handler registered (common on a fresh macOS, and in embedded/preview
+     browsers). The link still fires for anyone who does have one; this
+     just guarantees the address is never a dead end by copying it and
+     saying so.
+     ------------------------------------------------------------------ */
+  (function mailto() {
+    var toast, hideTimer;
+
+    function say(msg) {
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.classList.add('is-up');
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(function () { toast.classList.remove('is-up'); }, 3200);
+    }
+
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+      if (!a) return;
+      // never block the real mailto — this only runs alongside it
+      var addr = a.getAttribute('href').slice(7).split('?')[0];
+
+      // Always surface the address. Copying can be refused (no user
+      // activation, denied permission, insecure origin) — when it is, show
+      // the address anyway so the click is never a silent dead end.
+      function done(copied) {
+        say(copied ? addr + ' — copied to your clipboard' : addr);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          navigator.clipboard.writeText(addr).then(
+            function () { done(true); },
+            function () { done(false); }
+          );
+        } catch (err) { done(false); }
+      } else {
+        done(false);
+      }
+    });
+  })();
+
+  /* ------------------------------------------------------------------
      Reveal on scroll
      ------------------------------------------------------------------ */
   (function reveal() {

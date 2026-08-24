@@ -255,7 +255,7 @@ html{scrollbar-gutter:stable}
 .hero__in{
   position:relative;z-index:4;width:100%;max-width:var(--shell);margin-inline:auto;
   padding:clamp(28px,4vh,44px) var(--gutter) clamp(36px,6vh,58px);
-  min-height:max(560px,95vh);
+  min-height:max(560px,85vh);
   display:flex;flex-direction:column;
   /* mobile: copy sits at the bottom so the portrait reads above it */
   justify-content:flex-end;
@@ -644,6 +644,22 @@ html{scrollbar-gutter:stable}
   60%{transform:translate(5%,0)}70%{transform:translate(-4%,7%)}80%{transform:translate(6%,-3%)}
   90%{transform:translate(-6%,-5%)}100%{transform:translate(0,0)}
 }
+
+/* ==========================================================================
+   Toast — clipboard confirmation for mailto links
+   ========================================================================== */
+.toast{
+  position:fixed;left:50%;bottom:24px;z-index:800;
+  transform:translate(-50%,140%);
+  background:var(--paper);color:var(--ink);
+  font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;
+  padding:13px 20px;border-radius:99px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+  transition:transform .42s var(--ease),opacity .42s var(--ease);
+  opacity:0;pointer-events:none;max-width:calc(100vw - 32px);
+  text-align:center;
+}
+.toast.is-up{transform:translate(-50%,0);opacity:1}
 
 /* ==========================================================================
    CASE STUDIES PAGE
