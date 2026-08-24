@@ -10,6 +10,10 @@
   --ink:#0A0A0A;
   --paper:#F4F4EF;
   --flame:#FF3B00;
+  /* Orange used as a SURFACE with dark text on it. Never re-scoped: the
+     light-section override below darkens --flame for legibility as text,
+     but darkening a fill would push the ink sitting on it under the floor. */
+  --flame-fill:#FF3B00;
   --exp:#111110;
 
   --shell:1280px;
@@ -54,12 +58,12 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit}
 h1,h2,h3,h4,p,ul,figure{margin:0}
 ul{padding:0;list-style:none}
-::selection{background:var(--flame);color:var(--ink)}
+::selection{background:var(--flame-fill);color:var(--ink)}
 :focus-visible{outline:2px solid var(--flame);outline-offset:4px;border-radius:2px}
 
 .skip{
   position:absolute;left:var(--gutter);top:-100px;z-index:900;
-  background:var(--flame);color:var(--ink);padding:12px 18px;border-radius:99px;
+  background:var(--flame-fill);color:var(--ink);padding:12px 18px;border-radius:99px;
   font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   transition:top .2s var(--ease);
 }
@@ -82,7 +86,16 @@ em,.em{
 /* section shell */
 .shell{width:100%;max-width:var(--shell);margin-inline:auto;padding:var(--sec-y) var(--gutter);position:relative;z-index:1}
 .section{position:relative;overflow:hidden}
-.section--light{background:var(--paper);color:var(--ink)}
+.section--light{
+  background:var(--paper);color:var(--ink);
+  /* Brand orange on cream is only 3.24:1 — fine for the big display accents
+     (large text needs 3:1) but under the floor for the 10.5px eyebrows, and
+     for the work-row accents once their clamp bottoms out at ~17.8px on a
+     phone. Rather than run two oranges on one page, the whole light surface
+     takes a deeper orange: 5.04:1, the smallest shift off #FF3B00 that
+     clears AA. Dark sections keep the brand orange untouched. */
+  --flame:#C62D00;
+}
 
 /* grain + dot decorations */
 .grain{
@@ -126,7 +139,7 @@ em,.em{
   transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease);
   will-change:transform;
 }
-.btn--fill{background:var(--flame);color:var(--ink)}
+.btn--fill{background:var(--flame-fill);color:var(--ink)}
 .btn--fill:hover{background:var(--paper);color:var(--ink)}
 .btn--ghost{border-color:var(--d-28);color:var(--paper)}
 .btn--ghost:hover{border-color:var(--flame);color:var(--flame)}
@@ -323,7 +336,7 @@ html{scrollbar-gutter:stable}
 /* ==========================================================================
    Marquee
    ========================================================================== */
-.mq{background:var(--flame);color:var(--ink);padding:12px 0;overflow:hidden}
+.mq{background:var(--flame-fill);color:var(--ink);padding:12px 0;overflow:hidden}
 .mq__track{display:flex;white-space:nowrap;animation:run 30s linear infinite;will-change:transform}
 .mq__track span{
   display:inline-flex;gap:clamp(20px,4vw,34px);padding-right:clamp(20px,4vw,34px);
@@ -524,7 +537,7 @@ html{scrollbar-gutter:stable}
 .work-row__t em{font-size:1.06em}
 .work-row__m{grid-area:meta;font-family:'DM Mono',monospace;font-size:10px;opacity:.5;white-space:nowrap}
 @media (hover:hover){
-  .work-row:hover{background:var(--flame);padding-inline:20px;color:var(--ink)}
+  .work-row:hover{background:var(--flame-fill);padding-inline:20px;color:var(--ink)}
   .work-row:hover em{color:var(--ink)}
 }
 .work-note{
@@ -806,7 +819,7 @@ html{scrollbar-gutter:stable}
 .cs-contact .cta-row{margin-top:clamp(28px,4vh,40px)}
 .cs-contact .btn{padding:17px 28px;font-size:11.5px;letter-spacing:.14em}
 .cs-contact .btn--fill{background:var(--ink);color:var(--paper)}
-.cs-contact .btn--fill:hover{background:var(--flame);color:var(--ink)}
+.cs-contact .btn--fill:hover{background:var(--flame-fill);color:var(--ink)}
 .btn .arrow-l{font-size:14px;display:inline-block;transition:transform .34s var(--ease)}
 .btn:hover .arrow-l{transform:translateX(-3px)}
 
