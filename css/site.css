@@ -335,22 +335,34 @@ html{scrollbar-gutter:stable}
    Intro
    ========================================================================== */
 .dots{
+  /* one dial for the whole field; the breakpoints below move it */
+  --dot-a:.95;
   position:absolute;inset:0;pointer-events:none;z-index:0;
   background-image:radial-gradient(circle,rgba(255,59,0,.95) 1.25px,transparent 2px);
-  background-size:20px 20px;opacity:.55;
+  background-size:20px 20px;
+  opacity:var(--dot-a);
   /* The blob is centred off-canvas, so what you actually see is the OUTER band
      of this gradient. A solid core of only a few percent left that band at
      ~5% alpha — invisible. Holding full strength out to 40% fixes that.
-     The opacity is then capped so that even a dot landing directly on a
-     glyph keeps body copy above the 4.5:1 AA contrast floor — measured, not
-     guessed. Net effect is roughly 6x the old field strength. */
-  -webkit-mask-image:radial-gradient(78% 70% at var(--dx,126%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
-  mask-image:radial-gradient(78% 70% at var(--dx,126%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
+     The blob is then pushed far enough off-canvas (±55%) that its core sits
+     outside the frame entirely: the field is strongest in the page margin
+     and has faded out by ~250px into the copy. Text is left-aligned, so
+     every line begins at the margin — that is the edge that had to be kept
+     clear. Opacity is raised to compensate for the lower on-screen peak. */
+  -webkit-mask-image:radial-gradient(78% 70% at var(--dx,155%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
+  mask-image:radial-gradient(78% 70% at var(--dx,155%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
   animation:dotdrift 26s ease-in-out infinite;
 }
 /* case-study sections place the dot field per section and hold it still */
-/* Case studies are dense reading — hold the field a touch back there. */
-.cs .dots{animation:none;opacity:.5}
+/* Case studies hold still; opacity still comes from --dot-a. */
+.cs .dots{animation:none}
+
+/* How much clear space sits left of the text is what decides how strong the
+   field can be, and that is the gutter: 144px at 1440, but only 51px at 1024
+   and 20px on a phone. Below those widths the field cannot fade out before
+   the copy starts, so dial it back rather than let it sit under the text. */
+@media (max-width:1365px){ .dots{--dot-a:.8} }
+@media (max-width:767px){  .dots{--dot-a:.7;animation:none} }
 .two{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,72px);align-items:start}
 .intro h2{
   font-family:Archivo,'Arial Narrow',sans-serif;font-weight:400;
@@ -652,9 +664,8 @@ html{scrollbar-gutter:stable}
 @keyframes run{to{transform:translateX(-50%)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 @keyframes dotdrift{
-  0%{transform:translate(0,0) scale(1);opacity:.45}
-  50%{transform:translate(-14px,10px) scale(1.04);opacity:.58}
-  100%{transform:translate(0,0) scale(1);opacity:.45}
+  0%,100%{transform:translate(0,0) scale(1);opacity:calc(var(--dot-a) * .84)}
+  50%{transform:translate(-14px,10px) scale(1.04);opacity:var(--dot-a)}
 }
 @keyframes grainshift{
   0%{transform:translate(0,0)}10%{transform:translate(-3%,-4%)}20%{transform:translate(-8%,2%)}
