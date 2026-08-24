@@ -872,7 +872,13 @@ html{scrollbar-gutter:stable}
     mask-image:linear-gradient(to left,#000 54%,transparent 98%);
   }
   .hero__scrim{background:linear-gradient(to top,rgba(10,10,10,.9) 0%,rgba(10,10,10,.1) 54%)}
-  .hero__copy{max-width:min(62vw,1020px)}
+  /* desktop: the portrait sits to the right, so the copy no longer needs to
+     duck under it — centre the block for a more balanced hero.
+     Auto margins rather than justify-content:center: when the copy is taller
+     than the box (short laptop screens) autos resolve to 0 and it falls back
+     to the top padding, instead of overflowing up under the sticky header. */
+  .hero__in{justify-content:flex-start}
+  .hero__copy{max-width:min(62vw,1020px);margin-block:auto}
 
   /* stat cards fan out vertically */
   .stats{display:block;width:216px}
