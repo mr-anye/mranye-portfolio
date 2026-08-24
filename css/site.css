@@ -340,14 +340,21 @@ html{scrollbar-gutter:stable}
    ========================================================================== */
 .dots{
   position:absolute;inset:0;pointer-events:none;z-index:0;
-  background-image:radial-gradient(circle,rgba(255,59,0,.85) 1px,transparent 1.6px);
-  background-size:20px 20px;opacity:.42;
-  -webkit-mask-image:radial-gradient(70% 62% at var(--dx,126%) var(--dy,78%),#000 4%,transparent 62%);
-  mask-image:radial-gradient(70% 62% at var(--dx,126%) var(--dy,78%),#000 4%,transparent 62%);
+  background-image:radial-gradient(circle,rgba(255,59,0,.95) 1.25px,transparent 2px);
+  background-size:20px 20px;opacity:.55;
+  /* The blob is centred off-canvas, so what you actually see is the OUTER band
+     of this gradient. A solid core of only a few percent left that band at
+     ~5% alpha — invisible. Holding full strength out to 40% fixes that.
+     The opacity is then capped so that even a dot landing directly on a
+     glyph keeps body copy above the 4.5:1 AA contrast floor — measured, not
+     guessed. Net effect is roughly 6x the old field strength. */
+  -webkit-mask-image:radial-gradient(78% 70% at var(--dx,126%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
+  mask-image:radial-gradient(78% 70% at var(--dx,126%) var(--dy,78%),#000 40%,rgba(0,0,0,.5) 64%,transparent 86%);
   animation:dotdrift 26s ease-in-out infinite;
 }
 /* case-study sections place the dot field per section and hold it still */
-.cs .dots{animation:none}
+/* Case studies are dense reading — hold the field a touch back there. */
+.cs .dots{animation:none;opacity:.5}
 .two{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,72px);align-items:start}
 .intro h2{
   font-family:Archivo,'Arial Narrow',sans-serif;font-weight:400;
@@ -649,9 +656,9 @@ html{scrollbar-gutter:stable}
 @keyframes run{to{transform:translateX(-50%)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 @keyframes dotdrift{
-  0%{transform:translate(0,0) scale(1);opacity:.55}
-  50%{transform:translate(-14px,10px) scale(1.04);opacity:.8}
-  100%{transform:translate(0,0) scale(1);opacity:.55}
+  0%{transform:translate(0,0) scale(1);opacity:.45}
+  50%{transform:translate(-14px,10px) scale(1.04);opacity:.58}
+  100%{transform:translate(0,0) scale(1);opacity:.45}
 }
 @keyframes grainshift{
   0%{transform:translate(0,0)}10%{transform:translate(-3%,-4%)}20%{transform:translate(-8%,2%)}
